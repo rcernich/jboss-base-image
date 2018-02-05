@@ -1,0 +1,25 @@
+schema_version: 1
+
+name: jboss.base.image
+
+labels:
+- name: maintainer
+  value: "Cloud Enablement Feedback <cloud-enablement-feedback@redhat.com>"
+
+envs:
+- name: "HOME"
+  value: "/home/jboss"
+
+packages:
+  install:
+  - yum-utils
+  - unzip
+  - tar
+  - rsync
+
+run:
+  user: 185
+  workdir: "/home/jboss"
+
+execute:
+- script: add_jboss_user.sh

@@ -1,11 +1,11 @@
 schema_version: 1
 
-name: "jboss/base-rhel7"
+name: "jboss/base-centos7"
 version: "1.2"
-from: "rhel7:7.4-released"
+from: "centos:7"
 description: "Base image for all other Middleware container images which provides common set of tools, jboss user and home directory"
 
-platform: rhel:7
+platform: centos:7
 
 modules:
   repositories:
@@ -13,8 +13,3 @@ modules:
     path: modules/image
   install:
   - name: jboss.base.image
-
-osbs:
-  repository:
-    name: jboss-base-docker
-    branch: jb-rhel-7
